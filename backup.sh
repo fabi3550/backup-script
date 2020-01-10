@@ -13,7 +13,7 @@ while [ "$1" != '' ]
     done
 
 # define backup filename
-backup_filename=$(date +"%Y_%m_%d").tar.gz
+backup_filename=$(date +"%Y_%m_%d")_$HOSTNAME.tar.gz
 
 #create a tar file by parameterfile
 logmessage "create a tar file"
