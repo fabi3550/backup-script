@@ -5,4 +5,4 @@ Possible parameters:
 
 --scp <user@:/path/where/to/copy><br>
 --file </path/where/to/copy><br>
---pgp <key-id><br>
+--pgp <pgpkey><br>
