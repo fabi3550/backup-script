@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $PWD
-
 logmessage() {
     echo $(date +"%H:%M:%S"): $1
 }
