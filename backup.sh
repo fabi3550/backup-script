@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $PWD
+
 logmessage() {
     echo $(date +"%H:%M:%S"): $1
 }
@@ -10,6 +12,7 @@ while [ "$1" != '' ]
         [ "$1" == --scp ] && scp_path="$2" && shift && shift
         [ "$1" == --file ] && target_filename="$2" && shift && shift
         [ "$1" == --pgp ] && pgp_key="$2" && shift && shift
+        [ "$1" == --list ] && listfile="$2" && shift && shift
     done
 
 # define backup filename
@@ -17,7 +20,7 @@ backup_filename=$(date +"%Y_%m_%d")_$HOSTNAME.tar.gz
 
 #create a tar file by parameterfile
 logmessage "create a tar file"
-tar -cjf $backup_filename -T backup.conf
+tar -cjf $backup_filename -T $listfile
 
 #encrypt with defined pgp key
 if [ -n "$pgp_key" ]
