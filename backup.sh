@@ -18,7 +18,7 @@ backup_filename=$(date +"%Y_%m_%d")_$HOSTNAME.tar.gz
 
 #create a tar file by parameterfile
 logmessage "create a tar file"
-tar -cjf $backup_filename -T $listfile
+tar -cjf $HOME/$backup_filename -T $listfile
 
 #encrypt with defined pgp key
 if [ -n "$pgp_key" ]
