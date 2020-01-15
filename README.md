@@ -3,6 +3,6 @@ Simple backup script using bash
 
 Possible parameters:
 
---scp <user@:/path/where/to/copy>
---file </path/where/to/copy>
---pgp <key-id>
+--scp <user@:/path/where/to/copy><br>
+--file <path/where/to/copy><br>
+--pgp <pgpkey><br>
